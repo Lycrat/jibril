@@ -3,18 +3,20 @@ package SuperheroPackage;
 
 import com.panya.IFlyable;
 
+import java.util.Optional;
+
 public abstract class Superhero implements IFlyable {
     private String realName;
     private String superheroName;
     private String universe;
-    private String power;
+    private Optional<String> power;
     private String gender;
 
 
     private int health;
 
 
-    public Superhero(String realName, String superheroName, String universe, String power, String gender) {
+    public Superhero(String realName, String superheroName, String universe, Optional<String> power, String gender) {
         this.realName = realName;
         this.superheroName = superheroName;
         this.universe = universe;
@@ -49,11 +51,11 @@ public abstract class Superhero implements IFlyable {
         this.universe = universe;
     }
 
-    public String getPower() {
+    public Optional<String> getPower() {
         return power;
     }
 
-    public void setPower(String power) {
+    public void setPower(Optional<String> power) {
         this.power = power;
     }
 

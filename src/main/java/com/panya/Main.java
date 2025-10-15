@@ -7,6 +7,7 @@ import SuperheroPackage.Spiderman;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,7 +37,7 @@ public class Main {
                     "miles morales",
                     "Spiderman",
                     "Marvel",
-                    "Spider",
+                    Optional.of("Spider"),
                     "male",
                     true,
                     "black");
@@ -47,10 +48,10 @@ public class Main {
                     "peter parker",
                     "Spiderman",
                     "Marvel",
-                    "Spider",
+                    Optional.of("Spider"),
                     "male",
                     true,
-                    "white");
+                    "red");
 
             List<IFlyable> flyables = new ArrayList<>();
             flyables.add(milesMorales);
@@ -58,11 +59,11 @@ public class Main {
             flyables.add(alphaLioness);
             flyables.add(betaLioness);
 
-        }catch(LionessCubOverloadException e){
+            milesMorales.getPower().ifPresent(System.out::println);
+
+        }catch(LionessCubOverloadException | SpidermanSuitNonExistentException e){
             System.out.println(e);
-        }catch(SpidermanSuitNonExistentException e){
-            System.out.println(e);
-        }finally{
+        } finally{
             System.out.println("WORKS");
         }
 
