@@ -56,4 +56,6 @@ public abstract class Animal implements IFlyable {
     public void setRegion(String region) {
         this.region = region;
     }
+
+    public abstract void makeNoise();
 }

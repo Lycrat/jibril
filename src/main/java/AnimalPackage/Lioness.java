@@ -37,4 +37,9 @@ public class Lioness extends Animal {
     public boolean fly(){
         return false;
     }
+
+    @Override
+    public void makeNoise(){
+        System.out.println("RAWR MATE");
+    };
 }

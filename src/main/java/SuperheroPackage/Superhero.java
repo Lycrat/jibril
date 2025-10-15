@@ -19,6 +19,8 @@ public abstract class Superhero implements IFlyable {
         this.gender = gender;
     }
 
+     public abstract void saySignaturePhrase();
+
     public String getRealName() {
         return realName;
     }

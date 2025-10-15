@@ -38,4 +38,9 @@ public class Spiderman extends Superhero{
         }
         this.suit = suit;
     }
+
+    @Override
+    public void saySignaturePhrase() {
+        System.out.println("*Thwip Thwip* I'm your friendly neighbourhood spiderman");
+    }
 }
