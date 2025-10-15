@@ -1,6 +1,7 @@
 package AnimalPackage;
 
 import ExceptionPackage.LionessCubOverloadException;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -34,5 +35,13 @@ class LionessTest {
     void setCubCount() throws LionessCubOverloadException {
         lioness.setCubCount(1);
         assertEquals(1, lioness.getCubCount());
+    }
+
+    @Test
+    @DisplayName("Test")
+    void testBreed() {
+        lioness.setPregnant(false);
+        lioness.breed();
+        assertNotNull(lioness.isPregnant(), "Pregnancy status should be a valid boolean");
     }
 }

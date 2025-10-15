@@ -1,6 +1,7 @@
 package AnimalPackage;
 
 import ExceptionPackage.LionessCubOverloadException;
+import java.util.Random;
 
 public class Lioness extends Animal {
 
@@ -33,6 +34,23 @@ public class Lioness extends Animal {
         }
         this.cubCount = cubCount;
     }
+
+    public void breed() {
+        if (isPregnant) {
+            System.out.println(getName() + " breeding");
+        }
+
+        Random rand = new Random();
+        boolean success = rand.nextBoolean();
+        if (success) {
+            isPregnant = true;
+            System.out.println(getName() + " has become pregnant");
+        } else {
+            isPregnant = false;
+            System.out.println(getName() + " has not become pregnant. Try again");
+        }
+    }
+
     @Override
     public boolean fly(){
         return false;
