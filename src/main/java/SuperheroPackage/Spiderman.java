@@ -9,7 +9,7 @@ public class Spiderman extends Superhero{
     private boolean isSuitedUp;
     private String suit;
 
-    public Spiderman(String realName, String superheroName, String universe, Optional<String> power, String gender, boolean isSuitedUp, String suit) throws SpidermanSuitNonExistentException {
+    public Spiderman(String realName, String superheroName, String universe, String power, String gender, boolean isSuitedUp, String suit) throws SpidermanSuitNonExistentException {
         super(realName, superheroName, universe, power, gender);
         this.isSuitedUp = isSuitedUp;
         this.setSuit(suit);

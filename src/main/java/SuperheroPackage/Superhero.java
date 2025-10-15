@@ -16,11 +16,11 @@ public abstract class Superhero implements IFlyable {
     private int health;
 
 
-    public Superhero(String realName, String superheroName, String universe, Optional<String> power, String gender) {
+    public Superhero(String realName, String superheroName, String universe, String power, String gender) {
         this.realName = realName;
         this.superheroName = superheroName;
         this.universe = universe;
-        this.power = power;
+        this.power = Optional.of(power);
         this.gender = gender;
         this.health = 100;
     }
@@ -55,8 +55,8 @@ public abstract class Superhero implements IFlyable {
         return power;
     }
 
-    public void setPower(Optional<String> power) {
-        this.power = power;
+    public void setPower(String power) {
+        this.power = Optional.of(power);
     }
 
     public String getGender() {
