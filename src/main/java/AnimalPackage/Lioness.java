@@ -37,7 +37,7 @@ public class Lioness extends Animal {
 
     public void breed() {
         if (isPregnant) {
-            System.out.println(getName() + " breeding");
+            System.out.println(getName() + " is already pregnant");
         }
 
         Random rand = new Random();
