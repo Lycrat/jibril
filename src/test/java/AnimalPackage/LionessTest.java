@@ -16,6 +16,9 @@ class LionessTest {
             true,
             10);
 
+    LionessTest() throws LionessCubOverloadException {
+    }
+
     @Test
     void setPregnant() {
         lioness.setPregnant(false);

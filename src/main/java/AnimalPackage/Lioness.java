@@ -9,10 +9,10 @@ public class Lioness extends Animal {
 
     private int cubCount;
 
-    public Lioness(String name, String diet, boolean isPoisonous, String gender, String region, boolean isPregnant, int cubCount) {
+    public Lioness(String name, String diet, boolean isPoisonous, String gender, String region, boolean isPregnant, int cubCount) throws LionessCubOverloadException {
         super(name, diet, isPoisonous, gender, region);
         this.isPregnant = isPregnant;
-        this.cubCount = cubCount;
+        this.setCubCount(cubCount);
     }
 
     public boolean isPregnant() {
@@ -27,7 +27,7 @@ public class Lioness extends Animal {
         return cubCount;
     }
 
-    public void setCubCount(int cubCount) throws LionessCubOverloadException {
+    public void setCubCount(int cubCount) throws LionessCubOverloadException{
         if (cubCount > 10){
             throw new LionessCubOverloadException("Lioness would definitely not have more than 10 cubs");
         }

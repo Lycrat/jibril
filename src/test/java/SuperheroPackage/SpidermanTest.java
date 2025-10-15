@@ -15,6 +15,9 @@ class SpidermanTest {
             true,
             "black");
 
+    SpidermanTest() throws SpidermanSuitNonExistentException {
+    }
+
     @Test
     void testCanFly() {
         assertFalse(spiderman.fly());
