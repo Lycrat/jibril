@@ -1,5 +1,7 @@
 package SuperheroPackage;
 
+import ExceptionPackage.SpidermanSuitNonExistentException;
+
 public class Spiderman extends Superhero{
 
     private boolean isSuitedUp;
@@ -9,6 +11,8 @@ public class Spiderman extends Superhero{
         super(realName, superheroName, universe, power, gender);
         this.isSuitedUp = isSuitedUp;
         this.suit = suit;
+
+
     }
 
     @Override
@@ -28,7 +32,10 @@ public class Spiderman extends Superhero{
         return suit;
     }
 
-    public void setSuit(String suit) {
+    public void setSuit(String suit) throws SpidermanSuitNonExistentException {
+        if (!suit.equals("black") && !suit.equals("red")) {
+            throw new SpidermanSuitNonExistentException("suit is non-existent");
+        }
         this.suit = suit;
     }
 }
