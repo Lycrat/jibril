@@ -1,5 +1,5 @@
 package com.panya;
 
-interface IFlyable {
+public interface IFlyable {
     boolean fly();
 }

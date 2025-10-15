@@ -1,6 +1,8 @@
 package AnimalPackage;
 
-public abstract class Animal {
+import com.panya.IFlyable;
+
+public abstract class Animal implements IFlyable {
     private String name;
     private String diet;
     private boolean isPoisonous;
@@ -14,7 +16,6 @@ public abstract class Animal {
         this.gender = gender;
         this.region = region;
     }
-
 
     public String getName() {
         return name;

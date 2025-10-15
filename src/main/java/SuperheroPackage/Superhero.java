@@ -1,6 +1,9 @@
 package SuperheroPackage;
 
-public abstract class Superhero {
+
+import com.panya.IFlyable;
+
+public abstract class Superhero implements IFlyable {
     private String realName;
     private String superheroName;
     private String universe;
